@@ -15,6 +15,11 @@ import Contact from './Contact';
 
 
 const MainTitle = styled.div`
+
+  @media(max-width: 1200px) {
+    text-align:center;
+  }
+
   color: #FFFFFF;
   font-family: Rubik;
   font-size: 62px;
@@ -24,6 +29,11 @@ const MainTitle = styled.div`
 `;
 
 const SubTitle = styled.div`
+
+  @media(max-width: 1200px) {
+    text-align:center;
+  }
+
   height: 24px;
   color: #FFFFFF;
   font-family: Rubik;
@@ -34,6 +44,11 @@ const SubTitle = styled.div`
 `;
 
 const SubSubTitle = styled.div`
+
+  @media(max-width: 1200px) {
+    justify-content: center;
+  }
+
   font-size: 20px;
   color: white;
   font-weight: 300;
@@ -61,12 +76,12 @@ const MainImage = styled.div`
 
 const MainButtons = styled.div`
   display: flex;
-  @media (min-width: 700px) {
+  @media (min-width: 1200px) {
     flex-direction: row;
     max-width: 410px;
     margin-top: 60px;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 1200px) {
     margin-top: 40px;
 
     flex-direction: column;
@@ -135,10 +150,10 @@ const DownloadBChromeTextB = styled.div`
 `;
 
 const WatchVideo = styled.div`
-  @media (min-width: 700px) {
+  @media (min-width: 1200px) {
     flex: 1;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 1200px) {
     width: 190x;
     margin-top: 16px;
   }
@@ -148,7 +163,8 @@ const WatchVideo = styled.div`
   justify-content: center;
   height: 46px;
   margin-right: 10px;
-  border-radius: 8px;
+  margin-bottom: 30px;
+  border-radius: 0px;
   width: 190px;
   box-shadow: 0 2px 48px 0 #184dcf;
   padding-left: 8px;
@@ -337,75 +353,11 @@ class App extends Component {
                 By <EmurgoLogo src="./assets/emurgo_logo.png" alt="Emurgo - Creating a more connected and equitable world through Cardano blockchain" border="0" />
               </SubSubTitle>
               <MainButtons>
-                <Download style={{marginRight: '20px'}}>
-                  <DropdownButton onClick={this.showDropdownMenu}>
-                    <DownloadLabel>{formatMessage({id: 'header.download'})}</DownloadLabel>
-                    <img
-                      style= {{marginLeft:'158px', marginTop: '-31px'}}
-                      src="./assets/arrow down.svg"
-                    />
-                  </DropdownButton>
-                  { this.state.showDownloadDropdown &&
-                    <OutsideClickHandler onOutsideClick={this.hideDropdownMenu}>
-                      <DropdownContent>
-                        <a
-                          rel="noopener"
-                          target= '_blank'
-                          href= "https://chrome.google.com/webstore/detail/yoroi/ffnbelfdoeiohenkjibnmadjiehjhajb"
-                        >
-                          <DownloadItemImage
-                            style={{  width: '16px', height: '16px', marginLeft: '5px', marginRight: '10px' }}
-                            src="./assets/chrome.svg"
-                          />
-                          {formatMessage({id: 'download.mainnet.chrome'})}
-                        </a>
-                        <a
-                          rel="noopener"
-                          target= '_blank'
-                          href= "https://chrome.google.com/webstore/detail/yoroi-shelley-testnet/bioklcnnnpdblghplkifbemcigeanmjn"
-                        >
-                          <DownloadItemImage
-                            style={{  width: '16px', height: '16px', marginLeft: '5px', marginRight: '10px' }}
-                            src="./assets/chrome.svg"
-                          />
-                          {formatMessage({id: 'download.testnet.chrome'})}
-                        </a>
-                        <a
-                          rel="noopener"
-                          target= '_blank'
-                          href="https://addons.mozilla.org/en-US/firefox/addon/yoroi/"
-                        >
-                          <DownloadItemImage src="./assets/firefox.svg" />
-                          {formatMessage({id: 'download.mainnet.firefox'})}
-                        </a>
-                        <a
-                          rel="noopener"
-                          target= '_blank'
-                          href="https://addons.mozilla.org/en-US/firefox/addon/yoroi-shelley-testnet/"
-                        >
-                          <DownloadItemImage src="./assets/firefox.svg" />
-                          {formatMessage({id: 'download.testnet.firefox'})}
-                        </a>
-                        <a
-                          rel="noopener"
-                          target= '_blank'
-                          href="https://play.google.com/store/apps/details?id=com.emurgo&hl=en"
-                        >
-                          <DownloadItemImage src="./assets/google-play.svg" />
-                          {formatMessage({id: 'download.mainnet.android'})}
-                        </a>
-                        <a
-                          rel="noopener"
-                          target= '_blank'
-                          href="https://apps.apple.com/us/app/emurgos-yoroi-cardano-wallet/id1447326389"
-                        >
-                          <DownloadItemImage src="./assets/apple.svg" />
-                          {formatMessage({id: 'download.mainnet.ios'})}
-                        </a>
-                      </DropdownContent>
-                    </OutsideClickHandler>
-                  }
-                </Download>
+                <WatchVideo onClick={this.openVideo} style={{marginTop: '-7px'}}>
+                  <div style={{ width: '140px'}}>
+                    <WatchVideoText> LEARN MORE </WatchVideoText>
+                  </div>
+                </WatchVideo>
                 <WatchVideo onClick={this.openVideo} style={{marginTop: '-7px'}}>
                   <span>
                     <WatchVideoImage />
