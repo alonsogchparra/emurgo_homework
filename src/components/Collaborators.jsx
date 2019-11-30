@@ -5,21 +5,25 @@ import styled from 'styled-components';
 
 import { Container, ContainerGrey, SectionTitle } from '../css';
 
+const CollaboratorItems = styled.div`
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 23px;
+`;
+
 class Collaborators extends Component {
   render() {
     const _Collaborators = ({ intl: { formatMessage } }) => (
       <ContainerGrey>
         <Container>
           <SectionTitle>{formatMessage({ id: 'home.collaborators.our-collaborators' })}</SectionTitle>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'center',
-              paddingBottom: '23px',
-            }}
-          >
+          <CollaboratorItems>
             <div style={{ margin: '16px' }}>
               <a target="_blank" href="https://emurgo.io/">
                 <img onMouseEnter={e => (e.currentTarget.src = './assets/emurgo-hover.svg')} onMouseLeave={e => (e.currentTarget.src = './assets/emurgo-default.svg')} style={{ height: '50px' }} src="./assets/emurgo-default.svg" alt="Emurgo - Creating a more connected and equitable world through Cardano blockchain" />
@@ -40,7 +44,7 @@ class Collaborators extends Component {
               <img onMouseEnter={e => (e.currentTarget.src = './assets/cardano-hover.svg')} onMouseLeave={e => (e.currentTarget.src = './assets/cardano-default.svg')} style={{ height: '50px' }} src="./assets/cardano-default.svg" alt="Cardano" />
               </a>
             </div>
-          </div>
+          </CollaboratorItems>
         </Container>
       </ContainerGrey>
     );
