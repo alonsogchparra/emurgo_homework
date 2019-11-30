@@ -4,7 +4,7 @@ const Overflow = styled.div `
   @media (max-width: 700px) {
     margin-top: 46px;
   }
-  
+
   @media (min-width: 700px) {
     margin-top: 86px;
   }
@@ -16,7 +16,7 @@ const OverflowS = styled.div `
   @media (max-width: 700px) {
     margin-top: 43px;
   }
-  
+
   @media (min-width: 700px) {
     margin-top: 43px;
   }
@@ -31,7 +31,7 @@ const Container = styled.div `
   }
   margin: 0 auto;
   max-width: 1040px;
-  
+
   padding-left: 20px;
   padding-right: 20px;
 `;
@@ -58,6 +58,10 @@ const SectionTitle = styled.div `
   width: 100%;
   text-align: center;
   padding-top:60px;
+  color: #306d77;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const SectionTitleLight = styled(SectionTitle)`
