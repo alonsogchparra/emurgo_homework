@@ -44,16 +44,16 @@ const navFixed = {
   top: 0,
   position: "fixed",
   zIndex: 10,
-  
+
 };
 
-const Content = styled.div`  
+const Content = styled.div`
   display: flex;
   max-width: 1115px;
   margin: 10px auto;
   a{
     padding-top: 5px;
-    
+
   }
 `;
 
@@ -66,7 +66,7 @@ const NavFixed = styled.div`
   height: 24px;
   font-weight: 500;
   margin: 5px;
-  a{    
+  a{
     display: inline-block;
     text-decoration: none;
     height: 23px;
@@ -89,7 +89,7 @@ const Logo = styled.img`
   text-align: center;
   max-width: 128px;
   height: 35px;
- 
+
 `;
 
 const VTitleList = styled.div`
@@ -97,7 +97,7 @@ const VTitleList = styled.div`
   margin: 4px;
   text-align: center;
   text-transform: uppercase;
- 
+
   font-size: 15px;
   height: 24px;
   font-weight: 500;
@@ -106,18 +106,18 @@ const VTitleList = styled.div`
     text-decoration: none;
     display: inline-block;
     height: 23px;
-    
+
     &.active{
       border-bottom: 2px solid white;
-      padding-bottom: 0.5px;      
+      padding-bottom: 0.5px;
     }
 
-    &:link,   
+    &:link,
     &:visited{
       color: white;
     }
   }
-  
+
 `;
 
 /*
@@ -138,7 +138,7 @@ const Background = styled.div`
   @media (min-width: 700px) {
     height: ${p => (p.hasOffset ? '1062px' : '1035px')};
     top:  ${p => (p.hasOffset ? '-1275px' : '-900px')}; ;
-    right: ${p => (p.hasOffset ? '640px' : '730px')}; 
+    right: ${p => (p.hasOffset ? '640px' : '730px')};
   }
   @media (max-width: 700px) {
     height: ${p => (p.hasOffset ? '1062px' : '1035px')};
@@ -160,19 +160,19 @@ const BackgroundB = styled.div`
   transform: skew(56deg, -31deg);
   background-image: ${p => (p.hasOffset ? 'linear-gradient(82deg, #3256C8, #4760ff 30%)' : 'linear-gradient(51.8deg, #3154CB 0%, rgba(49,84,203,0.97) 10%, rgba(49,84,203,0.87) 25%, rgba(49,84,203,0.71) 43%, rgba(49,84,203,0.49) 63%, rgba(49,84,203,0.21) 85%, rgba(49,84,203,0) 100%)')};
   z-index: -2;
-  
-  
+
+
   @media (min-width: 700px) {
     height: ${p => (p.hasOffset ? '926px' : '912px')};
-    top:  ${p => (p.hasOffset ? '-2292px' : '-1880px')}; 
-    right: ${p => (p.hasOffset ? '621px' : '680px')}; 
+    top:  ${p => (p.hasOffset ? '-2292px' : '-1880px')};
+    right: ${p => (p.hasOffset ? '621px' : '680px')};
   }
   @media (max-width: 700px) {
     height: ${p => (p.hasOffset ? '926px' : '912px')};
     top:  ${p => (p.hasOffset ? '-696px' : '-933px')}; ;
     right: -31px;
   }
-  
+
 }
 `;
 
@@ -181,7 +181,7 @@ const BackgroundC = styled.div`
   width: 2100px;
   border-radius: 30px;
   transform: skew(56deg, -31deg);
-  background: ${p => (p.hasOffset ? 'linear-gradient(27deg, rgba(255,255,255,0) 0%, #FFFFFF 100%)' : 'linear-gradient(49.34deg, #4968D6 0%, rgba(69,101,212,0.95) 10%, rgba(59,92,207,0.81) 42%, rgba(52,87,204,0.73) 69%, rgba(50,85,203,0.7) 88%, rgba(50,85,203,0.61) 89%, rgba(49,84,203,0.44) 92%, rgba(49,84,203,0.31) 95%, rgba(49,84,203,0.23) 98%, rgba(49,84,203,0.2) 100%);')}; 
+  background: ${p => (p.hasOffset ? 'linear-gradient(27deg, rgba(255,255,255,0) 0%, #FFFFFF 100%)' : 'linear-gradient(49.34deg, #4968D6 0%, rgba(69,101,212,0.95) 10%, rgba(59,92,207,0.81) 42%, rgba(52,87,204,0.73) 69%, rgba(50,85,203,0.7) 88%, rgba(50,85,203,0.61) 89%, rgba(49,84,203,0.44) 92%, rgba(49,84,203,0.31) 95%, rgba(49,84,203,0.23) 98%, rgba(49,84,203,0.2) 100%);')};
   z-index: -1;
 
   @media (min-width: 700px) {
@@ -225,14 +225,14 @@ const Selector = styled.select`
   font-size: 15px;
   font-weight: 500;
   line-height: 18px;
-  padding-left: 16px; 
+  padding-left: 16px;
   height: 48px;
-  width: 182px;                
+  width: 182px;
   cursor: pointer;
-  &:hover{    
+  &:hover{
     background-color: rgba(255,255,255,0.15);
     box-shadow: 0 2px 48px 0 rgba(83,81,81,0.5);
-    
+
       }
 `;
 
@@ -322,7 +322,7 @@ class App extends Component {
         </HeaderAltSub>
         <Container>
           <HeaderAlt>
-            <Logo  src="./assets/logo.png" alt="Yoroi is a Web Light Wallet for Cardano Secure Fast Simple" />
+            <Logo  src="../assets/emurgo-hover.svg" alt="Yoroi is a Web Light Wallet for Cardano Secure Fast Simple" />
             <div style={{ flex: 1 }} />
             <a style={{ color: 'white', fontSize: '30px' }} href="javascript:void(0);" className="icon" onClick={this.toggleMenu}>
               <i className="fa fa-bars" />
@@ -331,7 +331,7 @@ class App extends Component {
           <HeaderText>
             <VTitleList>
               <Link to="/">
-                <Logo style={{marginLeft: '-120px'}} src="./assets/logo.png" alt="Yoroi is a Web Light Wallet for Cardano Secure Fast Simple" />
+                <Logo style={{marginLeft: '-120px'}} src="../assets/emurgo-hover.svg" alt="Yoroi is a Web Light Wallet for Cardano Secure Fast Simple" />
               </Link>
             </VTitleList>
             <div style={{ flex: 0.3 }} />
@@ -370,7 +370,7 @@ class App extends Component {
               <Content>
                 <NavFixed onClick={scroll}>
                   <Link to="/">
-                    <Logo src="./assets/logo.png" alt="Yoroi is a Web Light Wallet for Cardano Secure Fast Simple" />
+                    <Logo src="../assets/emurgo-hover.svg" alt="Yoroi is a Web Light Wallet for Cardano Secure Fast Simple" />
                   </Link>
                 </NavFixed>
                 <div style={{ flex: 0.3, marginRight: '45px' }} />
@@ -392,7 +392,7 @@ class App extends Component {
                 </NavFixed>
                 <div style={{ flex: 0.1 }} />
                 <NavFixed style={{marginRight: '35px', marginTop: '-5px'}}>
-                  <Selector 
+                  <Selector
                     style={{marginRight: '7px'}}
                     value={locale.value}
                     onChange={event => (locale.value = event.target.value)}
