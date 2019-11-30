@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 import { injectIntl } from 'react-intl';
 import { inject, observer } from 'mobx-react/index';
 import ModalVideo from 'react-modal-video';
-import SweetAlert from 'react-bootstrap-sweetalert';
 import { FormattedHTMLMessage } from 'react-intl';
 import OutsideClickHandler from 'react-outside-click-handler';
 import styled from 'styled-components';
 
-import { Container, ContainerGrey, Overflow, SectionTitle } from './../css';
-import Roadmap from './Roadmap';
-import Technologies from './Technologies';
+import { Container, Overflow } from './../css';
 import Collaborators from './Collaborators';
 import AboutNew from './AboutNew';
+import Developer from './Developer';
+import Blog from './Blog';
+import Contact from './Contact';
+
 
 const MainTitle = styled.div`
   color: #FFFFFF;
@@ -420,9 +421,10 @@ class App extends Component {
 
         </ContainerBottom>
         <AboutNew />
+        <Developer />
         <Collaborators />
-        <Roadmap />
-        <Technologies />
+        <Blog />
+        <Contact />
       </span>
     );
 
